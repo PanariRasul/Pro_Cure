@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Industries We Serve - Procure Marketing Leads</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary: #6366f1;
@@ -29,7 +32,7 @@
             --text: #1e293b;
             --text-light: #64748b;
             --white: #000;
-            
+
             --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
@@ -40,7 +43,7 @@
             --gradient-green: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
             --gradient-pink: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
             --gradient-blue: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            
+
             --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
             --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
             --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -49,7 +52,7 @@
             --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
             --shadow-glow: 0 0 50px rgba(99, 102, 241, 0.3);
             --shadow-glow-pink: 0 0 50px rgba(236, 72, 153, 0.3);
-        
+
             --primary-gradient: linear-gradient(135deg, #ffffffff 0%, #ffffffff 100%);
             --secondary-gradient: linear-gradient(135deg, #000000ff 0%, #000000ff 100%);
             --accent-gradient: linear-gradient(135deg, #000000ff 0%, #00f2fe 100%);
@@ -61,7 +64,7 @@
             --shadow-light: 0 8px 32px rgba(31, 38, 135, 0.37);
             --shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.3);
             --border-glass: 1px solid rgba(255, 255, 255, 0.18);
-             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             --glass-bg: rgba(255, 255, 255, 0.15);
@@ -93,7 +96,7 @@
         }
 
         /* Enhanced Navigation */
-       
+
         /* Hero Section */
         .hero-section {
             min-height: 100vh;
@@ -110,7 +113,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
+            background:
                 radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.4) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.4) 0%, transparent 50%),
                 radial-gradient(circle at 40% 80%, rgba(6, 182, 212, 0.3) 0%, transparent 50%);
@@ -123,16 +126,21 @@
             right: 0;
             bottom: 0;
             opacity: 0.05;
-            background: 
-                linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px);
+            background:
+                linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .1) 1px, transparent 1px);
             background-size: 100px 100px;
             animation: grid-move 30s linear infinite;
         }
 
         @keyframes grid-move {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(100px, 100px); }
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(100px, 100px);
+            }
         }
 
         .hero-content {
@@ -160,8 +168,13 @@
         }
 
         @keyframes pulse-glow {
-            0% { box-shadow: 0 0 30px rgba(0, 245, 255, 0.2); }
-            100% { box-shadow: 0 0 50px rgba(0, 245, 255, 0.4); }
+            0% {
+                box-shadow: 0 0 30px rgba(0, 245, 255, 0.2);
+            }
+
+            100% {
+                box-shadow: 0 0 50px rgba(0, 245, 255, 0.4);
+            }
         }
 
         .hero-title {
@@ -208,27 +221,65 @@
             animation: float-particles 15s linear infinite;
         }
 
-        .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
-        .particle:nth-child(2) { left: 20%; animation-delay: 2s; }
-        .particle:nth-child(3) { left: 30%; animation-delay: 4s; }
-        .particle:nth-child(4) { left: 40%; animation-delay: 6s; }
-        .particle:nth-child(5) { left: 50%; animation-delay: 8s; }
-        .particle:nth-child(6) { left: 60%; animation-delay: 10s; }
-        .particle:nth-child(7) { left: 70%; animation-delay: 12s; }
-        .particle:nth-child(8) { left: 80%; animation-delay: 14s; }
-        .particle:nth-child(9) { left: 90%; animation-delay: 16s; }
+        .particle:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .particle:nth-child(2) {
+            left: 20%;
+            animation-delay: 2s;
+        }
+
+        .particle:nth-child(3) {
+            left: 30%;
+            animation-delay: 4s;
+        }
+
+        .particle:nth-child(4) {
+            left: 40%;
+            animation-delay: 6s;
+        }
+
+        .particle:nth-child(5) {
+            left: 50%;
+            animation-delay: 8s;
+        }
+
+        .particle:nth-child(6) {
+            left: 60%;
+            animation-delay: 10s;
+        }
+
+        .particle:nth-child(7) {
+            left: 70%;
+            animation-delay: 12s;
+        }
+
+        .particle:nth-child(8) {
+            left: 80%;
+            animation-delay: 14s;
+        }
+
+        .particle:nth-child(9) {
+            left: 90%;
+            animation-delay: 16s;
+        }
 
         @keyframes float-particles {
             0% {
                 transform: translateY(100vh) scale(0);
                 opacity: 0;
             }
+
             10% {
                 opacity: 0.6;
             }
+
             90% {
                 opacity: 0.6;
             }
+
             100% {
                 transform: translateY(-100px) scale(1);
                 opacity: 0;
@@ -342,18 +393,53 @@
         }
 
         /* Different gradient for each industry */
-        .industry-card:nth-child(1) .industry-icon { background: var(--gradient-primary); }
-        .industry-card:nth-child(2) .industry-icon { background: var(--gradient-orange); }
-        .industry-card:nth-child(3) .industry-icon { background: var(--gradient-success); }
-        .industry-card:nth-child(4) .industry-icon { background: var(--gradient-secondary); }
-        .industry-card:nth-child(5) .industry-icon { background: var(--gradient-purple); }
-        .industry-card:nth-child(6) .industry-icon { background: var(--gradient-accent); }
-        .industry-card:nth-child(7) .industry-icon { background: var(--gradient-pink); }
-        .industry-card:nth-child(8) .industry-icon { background: var(--gradient-blue); }
-        .industry-card:nth-child(9) .industry-icon { background: var(--gradient-green); }
-        .industry-card:nth-child(10) .industry-icon { background: var(--gradient-cyber); }
-        .industry-card:nth-child(11) .industry-icon { background: var(--gradient-orange); }
-        .industry-card:nth-child(12) .industry-icon { background: var(--gradient-primary); }
+        .industry-card:nth-child(1) .industry-icon {
+            background: var(--gradient-primary);
+        }
+
+        .industry-card:nth-child(2) .industry-icon {
+            background: var(--gradient-orange);
+        }
+
+        .industry-card:nth-child(3) .industry-icon {
+            background: var(--gradient-success);
+        }
+
+        .industry-card:nth-child(4) .industry-icon {
+            background: var(--gradient-secondary);
+        }
+
+        .industry-card:nth-child(5) .industry-icon {
+            background: var(--gradient-purple);
+        }
+
+        .industry-card:nth-child(6) .industry-icon {
+            background: var(--gradient-accent);
+        }
+
+        .industry-card:nth-child(7) .industry-icon {
+            background: var(--gradient-pink);
+        }
+
+        .industry-card:nth-child(8) .industry-icon {
+            background: var(--gradient-blue);
+        }
+
+        .industry-card:nth-child(9) .industry-icon {
+            background: var(--gradient-green);
+        }
+
+        .industry-card:nth-child(10) .industry-icon {
+            background: var(--gradient-cyber);
+        }
+
+        .industry-card:nth-child(11) .industry-icon {
+            background: var(--gradient-orange);
+        }
+
+        .industry-card:nth-child(12) .industry-icon {
+            background: var(--gradient-primary);
+        }
 
         .industry-card:hover .industry-icon {
             transform: scale(1.15) rotate(10deg);
@@ -503,21 +589,21 @@
             .mobile-menu-toggle {
                 display: flex;
             }
-            
+
             .hero-content {
                 padding: 6rem 1rem 2rem;
             }
-            
+
             .industries-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-            
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-         
+
         }
 
         /* Scroll Animations */
@@ -532,16 +618,33 @@
             transform: translateY(0);
         }
 
-        .stagger-1 { transition-delay: 0.1s; }
-        .stagger-2 { transition-delay: 0.2s; }
-        .stagger-3 { transition-delay: 0.3s; }
-        .stagger-4 { transition-delay: 0.4s; }
-        .stagger-5 { transition-delay: 0.5s; }
-        .stagger-6 { transition-delay: 0.6s; }
+        .stagger-1 {
+            transition-delay: 0.1s;
+        }
 
-         /* Footer */
+        .stagger-2 {
+            transition-delay: 0.2s;
+        }
+
+        .stagger-3 {
+            transition-delay: 0.3s;
+        }
+
+        .stagger-4 {
+            transition-delay: 0.4s;
+        }
+
+        .stagger-5 {
+            transition-delay: 0.5s;
+        }
+
+        .stagger-6 {
+            transition-delay: 0.6s;
+        }
+
+        /* Footer */
         .modern-footer {
-            background:linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
             padding: 80px 0 30px 0;
             position: relative;
@@ -622,6 +725,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Enhanced Navigation -->
     <div id="navbar"></div>
@@ -637,7 +741,7 @@
     <section id="home" class="hero-section">
         <div class="hero-bg"></div>
         <div class="hero-grid"></div>
-        
+
         <div class="particles">
             <div class="particle"></div>
             <div class="particle"></div>
@@ -651,12 +755,13 @@
         </div>
 
         <div class="hero-content">
-             
+
             <h1 class="hero-title">
                 Industries We <span class="gradient-text">Transform</span>
             </h1>
             <p class="hero-subtitle">
-                From healthcare to fintech, manufacturing to media - we deliver precision-targeted leads that drive real results across every major industry sector.
+                From healthcare to fintech, manufacturing to media - we deliver precision-targeted leads that drive real
+                results across every major industry sector.
             </p>
         </div>
     </section>
@@ -678,7 +783,8 @@
                     </div>
                     <h4 class="industry-title">Healthcare</h4>
                     <p class="industry-description">
-                        Connect with hospitals, clinics, pharmaceutical companies, and medical suppliers to support healthcare outreach and patient engagement initiatives.
+                        Connect with hospitals, clinics, pharmaceutical companies, and medical suppliers to support
+                        healthcare outreach and patient engagement initiatives.
                     </p>
                 </div>
 
@@ -688,7 +794,8 @@
                     </div>
                     <h4 class="industry-title">Automotive</h4>
                     <p class="industry-description">
-                        Target OEMs, dealerships, and aftermarket vendors for campaigns focused on vehicle manufacturing, sales, and automotive services.
+                        Target OEMs, dealerships, and aftermarket vendors for campaigns focused on vehicle
+                        manufacturing, sales, and automotive services.
                     </p>
                 </div>
 
@@ -698,7 +805,8 @@
                     </div>
                     <h4 class="industry-title">Education</h4>
                     <p class="industry-description">
-                        Reach schools, universities, and edtech platforms with innovative solutions tailored for educators and academic administrators.
+                        Reach schools, universities, and edtech platforms with innovative solutions tailored for
+                        educators and academic administrators.
                     </p>
                 </div>
 
@@ -708,7 +816,8 @@
                     </div>
                     <h4 class="industry-title">Manufacturing</h4>
                     <p class="industry-description">
-                        Engage with manufacturers across sectors—machinery, electronics, textiles—for comprehensive industrial supply chain solutions.
+                        Engage with manufacturers across sectors—machinery, electronics, textiles—for comprehensive
+                        industrial supply chain solutions.
                     </p>
                 </div>
 
@@ -718,7 +827,8 @@
                     </div>
                     <h4 class="industry-title">Printing & Publishing</h4>
                     <p class="industry-description">
-                        Connect with publishers and printers for outreach related to content creation, distribution, and digital transformation.
+                        Connect with publishers and printers for outreach related to content creation, distribution, and
+                        digital transformation.
                     </p>
                 </div>
 
@@ -728,7 +838,8 @@
                     </div>
                     <h4 class="industry-title">Media</h4>
                     <p class="industry-description">
-                        Reach broadcasters, digital media firms, and content creators for advertising, analytics, and streaming services.
+                        Reach broadcasters, digital media firms, and content creators for advertising, analytics, and
+                        streaming services.
                     </p>
                 </div>
 
@@ -738,7 +849,8 @@
                     </div>
                     <h4 class="industry-title">Cybersecurity</h4>
                     <p class="industry-description">
-                        Collaborate with cybersecurity firms to enhance data protection, threat detection, and compliance solutions.
+                        Collaborate with cybersecurity firms to enhance data protection, threat detection, and
+                        compliance solutions.
                     </p>
                 </div>
                 <div class="industry-card animate-on-scroll stagger-2">
@@ -747,7 +859,8 @@
                     </div>
                     <h4 class="industry-title">Financial Services</h4>
                     <p class="industry-description">
-                        Target banks, insurance companies, and fintech startups with data solutions for customer acquisition and risk management.
+                        Target banks, insurance companies, and fintech startups with data solutions for customer
+                        acquisition and risk management.
                     </p>
                 </div>
                 <div class="industry-card animate-on-scroll stagger-3">
@@ -756,7 +869,8 @@
                     </div>
                     <h4 class="industry-title">Retail & E-commerce</h4>
                     <p class="industry-description">
-                        Engage retailers and e-commerce platforms with insights for inventory management, customer engagement, and sales optimization.
+                        Engage retailers and e-commerce platforms with insights for inventory management, customer
+                        engagement, and sales optimization.
                     </p>
                 </div>
                 <div class="industry-card animate-on-scroll stagger-4">
@@ -765,7 +879,8 @@
                     </div>
                     <h4 class="industry-title">Hospitality & Travel</h4>
                     <p class="industry-description">
-                        Connect with hotels, travel agencies, and tourism boards for targeted marketing and customer experience solutions.
+                        Connect with hotels, travel agencies, and tourism boards for targeted marketing and customer
+                        experience solutions.
                     </p>
                 </div>
                 <div class="industry-card animate-on-scroll stagger-5">
@@ -774,7 +889,8 @@
                     </div>
                     <h4 class="industry-title">Energy & Utilities</h4>
                     <p class="industry-description">
-                        Reach energy providers and utility companies with data-driven solutions for sustainability and operational efficiency.
+                        Reach energy providers and utility companies with data-driven solutions for sustainability and
+                        operational efficiency.
                     </p>
                 </div>
                 <div class="industry-card animate-on-scroll stagger-6">
@@ -783,7 +899,8 @@
                     </div>
                     <h4 class="industry-title">Legal Services</h4>
                     <p class="industry-description">
-                        Target law firms and legal consultants with data solutions for client acquisition, case management, and compliance.
+                        Target law firms and legal consultants with data solutions for client acquisition, case
+                        management, and compliance.
                     </p>
                 </div>
             </div>
@@ -812,9 +929,3 @@
                 document.getElementById("footer").innerHTML = data;
             });
     </script>
-
-
-
-
-
-    
