@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Procure Marketing Leads</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #66d0ea 0%, #4b91a2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #57d5f5 100%);
+            --dark-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --shadow-light: 0 8px 32px rgba(31, 38, 135, 0.37);
+            --shadow-medium: 0 15px 35px rgba(0, 0, 0, 0.1);
+            --text-primary: #2d3748;
+            --text-secondary: #718096;
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            --glass-bg: rgba(255, 255, 255, 0.15);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --text-light: #718096;
+            --bg-light: #f7fafc;
+            --white: #ffffff;
+            --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 20px 50px rgba(0, 0, 0, 0.1);
+            --shadow-strong: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 120px 0 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><polygon points="0,0 1000,100 1000,0"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        /* Services Grid */
+        .services-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-features li {
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-features li i {
+            color: #10b981;
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Process Section */
+        .process-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 100px 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--secondary-gradient);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px auto;
+        }
+
+        .process-step h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .process-step p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--dark-gradient);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            background: var(--secondary-gradient);
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        .modern-footer {
+            background: var(--dark-gradient);
+            color: white;
+            padding: 80px 0 30px 0;
+            position: relative;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h5 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(20px);
+        }
+
+        .social-icon:hover {
+            background: var(--primary-gradient);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Placeholder -->
+    <div id="navbar"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hero-title">Our Premium Services</h1>
+                <p class="hero-subtitle">Comprehensive marketing solutions designed to accelerate your business growth and maximize ROI</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What We Offer</h2>
+                <p>From targeted lead generation to comprehensive database management, we provide end-to-end marketing solutions that drive results.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Targeted Lead Generation</h3>
+                    <p>Generate high-quality leads with precision targeting based on industry, company size, location, and specific demographics that match your ideal customer profile.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>Industry-specific targeting</li>
+                        <li><i class="fas fa-check"></i>Geographic segmentation</li>
+                        <li><i class="fas fa-check"></i>Company size filtering</li>
+                        <li><i class="fas fa-check"></i>Decision-maker identification</li>
+                        <li><i class="fas fa-check"></i>Real-time lead scoring</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Data Verification & Cleansing</h3>
+                    <p>Ensure maximum deliverability and campaign effectiveness with our comprehensive data verification and cleansing services that maintain database integrity.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>Email verification & validation</li>
+                        <li><i class="fas fa-check"></i>Phone number verification</li>
+                        <li><i class="fas fa-check"></i>Address standardization</li>
+                        <li><i class="fas fa-check"></i>Duplicate removal</li>
+                        <li><i class="fas fa-check"></i>GDPR compliance checking</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Campaign Integration</h3>
+                    <p>Seamlessly integrate our data with your existing marketing automation platforms, CRM systems, and email marketing tools for maximum efficiency.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>CRM integration (Salesforce, HubSpot)</li>
+                        <li><i class="fas fa-check"></i>Email platform sync</li>
+                        <li><i class="fas fa-check"></i>Marketing automation setup</li>
+                        <li><i class="fas fa-check"></i>API connectivity</li>
+                        <li><i class="fas fa-check"></i>Custom field mapping</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Management</h3>
+                    <p>Complete database solutions built with deep understanding of your business requirements, target market analysis, and ongoing maintenance support.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>Custom database architecture</li>
+                        <li><i class="fas fa-check"></i>Regular data updates</li>
+                        <li><i class="fas fa-check"></i>Segmentation strategies</li>
+                        <li><i class="fas fa-check"></i>Performance analytics</li>
+                        <li><i class="fas fa-check"></i>Compliance monitoring</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Transform your digital presence with custom web development solutions that align with your marketing goals and provide seamless user experiences.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>Responsive website design</li>
+                        <li><i class="fas fa-check"></i>Landing page optimization</li>
+                        <li><i class="fas fa-check"></i>E-commerce solutions</li>
+                        <li><i class="fas fa-check"></i>SEO implementation</li>
+                        <li><i class="fas fa-check"></i>Performance optimization</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Strategic Consulting</h3>
+                    <p>Get expert guidance on marketing strategy, data utilization, and campaign optimization to maximize your return on investment and accelerate growth.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i>Marketing strategy development</li>
+                        <li><i class="fas fa-check"></i>Campaign optimization</li>
+                        <li><i class="fas fa-check"></i>ROI analysis & reporting</li>
+                        <li><i class="fas fa-check"></i>Market research insights</li>
+                        <li><i class="fas fa-check"></i>Competitive analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Process</h2>
+                <p>A streamlined approach that ensures quality, compliance, and results at every step of your marketing journey.</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>Discovery & Analysis</h4>
+                    <p>We start by understanding your business goals, target audience, and specific requirements through detailed consultation and market analysis.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>Strategy Development</h4>
+                    <p>Based on our analysis, we create a customized strategy that aligns with your objectives and maximizes campaign effectiveness.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>Data Collection</h4>
+                    <p>Using advanced tools and methodologies, we gather accurate, up-to-date data from reliable sources while ensuring full compliance.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>Quality Assurance</h4>
+                    <p>Every data point undergoes rigorous verification and cleansing processes to ensure maximum accuracy and deliverability.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h4>Delivery & Integration</h4>
+                    <p>We deliver your data in your preferred format and provide integration support to ensure seamless implementation.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <h4>Ongoing Support</h4>
+                    <p>Our relationship doesn't end at delivery. We provide ongoing support, updates, and optimization recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Transform Your Marketing?</h2>
+            <p class="cta-subtitle">Let's discuss how our services can help you achieve your business goals and drive measurable results.</p>
+            <a href="/pages/contact.html" class="btn btn-primary">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5>About Us</h5>
+                    <p>
+                        Procure Marketing Leads provides accurate, reliable, and compliant marketing data to help companies connect with the right audience and achieve measurable results.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Home</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Who We Are</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Contact Us</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-envelope me-2"></i>
+                        <a href="mailto:info@procure-marketingleads.com" style="color: rgba(255, 255, 255, 0.8);">
+                            info@procure-marketingleads.com
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> Procure Marketing Leads. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Load navbar
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            })
+            .catch(error => console.log('Navbar not found'));
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation for service cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Observe process steps
+        document.querySelectorAll('.process-step').forEach(step => {
+            step.style.opacity = '0';
+            step.style.transform = 'translateY(20px)';
+            step.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(step);
+        });
+    </script>
+</body>
+
+</html>

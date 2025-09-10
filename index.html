@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Procure Marketing Leads</title>
+
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #ffffffff 0%, #ffffffff 100%);
+            --secondary-gradient: linear-gradient(135deg, #000000ff 0%, #000000ff 100%);
+            --accent-gradient: linear-gradient(135deg, #000000ff 0%, #00f2fe 100%);
+            --dark-bg: #0f0f23;
+            --card-bg: rgba(255, 255, 255, 0.1);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --text-primary: #1a25bfff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+            --text-dark: #ffffffff;
+            --shadow-light: 0 8px 32px rgba(31, 38, 135, 0.37);
+            --shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.3);
+            --border-glass: 1px solid rgba(255, 255, 255, 0.18);
+             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            --glass-bg: rgba(255, 255, 255, 0.15);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --text-light: #718096;
+            --bg-light: #f7fafc;
+            --white: #ffffff;
+            --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 20px 50px rgba(0, 0, 0, 0.1);
+            --shadow-strong: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+
+        /* carousel */
+        .custom-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .custom-caption h5 {
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .custom-caption p {
+            font-size: 1.25rem;
+            color: #ddd;
+        }
+
+        .custom-caption .btn-primary {
+            margin-top: 1rem;
+        }
+
+         .hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #1e293b 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    padding: 2rem;
+}
+
+.hero-bg-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(79, 172, 254, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 242, 254, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(79, 172, 254, 0.3) 0%, transparent 50%);
+    animation: gradientShift 8s ease-in-out infinite;
+    z-index: 0;
+}
+
+        @keyframes gradientShift {
+            0%, 100% { opacity: 1; transform: translateX(0%) translateY(0%); }
+            50% { opacity: 0.8; transform: translateX(-10%) translateY(-5%); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            color: white;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            color: var(--primary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero-description {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            color: var(--gray-300);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            line-height: 1.7;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+        .hero-cta-group a
+        {
+            text-decoration: none;
+        }
+
+        .btn-primary-modern  {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+             
+        }
+
+        .btn-primary-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary-modern:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary-modern:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+            color: white;
+        }
+
+        .btn-secondary-modern {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary-modern:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        /* Floating Elements */
+        .hero-floating-cards {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .floating-card {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-card-1 {
+            top: 15%;
+            right: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-card-2 {
+            top: 60%;
+            right: 5%;
+            animation-delay: 2s;
+        }
+
+        .floating-card-3 {
+            bottom: 20%;
+            right: 25%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* Hero Section */
+        /* Hero Section */
+        /* .hero {
+            background: linear-gradient(to right, #bfb5da, #00c6ff);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+ 
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            animation: fadeDown 1s ease-out;
+        }
+
+       
+        .contact-btn {
+            margin-top: 20px;
+            padding: 12px 28px;
+            background: white;
+            color: #007bff;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background: #0056b3;
+            color: white;
+        }
+
+        
+        .hero i {
+            font-size: 60px;
+            color: #ffffff;
+            background: #007bff;
+            padding: 20px;
+            border-radius: 50%;
+            margin: 15px;
+            transition: all 0.4s ease-in-out;
+            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+            cursor: pointer;
+            display: inline-block;
+
+        
+            animation: pulse 2s infinite;
+        }
+ 
+        .hero i:hover {
+            color: #007bff;
+            background: #ffffff;
+            transform: scale(1.2) rotate(15deg);
+            box-shadow: 0 12px 25px rgba(0, 123, 255, 0.6);
+            animation: none;
+          
+        }
+
+         
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+      
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+            }
+
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 12px 25px rgba(0, 123, 255, 0.6);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+            }
+        } */
+
+
+        /* Section Styling */
+        .why-choose {
+            padding: 80px 20px;
+            text-align: center;
+            background: #f8f9fa;
+        }
+
+        .why-choose h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: black;
+        }
+
+        .why-choose p {
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            color: black;
+            font-size: 1.1rem;
+        }
+
+        /* Grid Layout */
+        .choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* Card Styling */
+        .choose-card {
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            opacity: 0;
+            /* For animation */
+            transform: translateY(40px);
+        }
+
+        /* Card Animation on Scroll */
+        .choose-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        /* Hover Effect */
+        .choose-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 12px 25px rgba(213, 170, 249, 0.2);
+        }
+
+        /* Icon Styling */
+        .choose-card i {
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        /* Icon Hover */
+        .choose-card:hover i {
+            transform: rotate(15deg) scale(1.2);
+            color: #000000;
+        }
+
+        .choose-card h5 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .choose-card p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* impact styling */
+        /* Impact Section */
+        .impact-section {
+            padding: 80px 20px;
+            text-align: center;
+            background: #f9fafc;
+        }
+
+        .impact-section h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+       
+   
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .impact-card {
+            background: #fff;
+            padding: 20px 10px;
+            border-radius: 16px;
+            height: 130px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.15);
+        }
+
+        .impact-card h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .impact-card p {
+            font-size: 1rem;
+            color: #555;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .impact-section p {
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .why-choose p {
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        #banner {
+            min-height: 60vh;
+            background: linear-gradient(90deg, #525354, #00c6ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        #banner h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        #banner p {
+            font-size: 1.2rem;
+            margin: 15px 0 25px;
+            animation: fadeInUp 1s ease-in-out 0.5s;
+        }
+
+        #banner .btn {
+            animation: fadeInUp 1s ease-in-out 1s;
+        }
+
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+      
+
+        @media (max-width: 768px) {
+            .social-icons {
+                justify-content: center;
+            }
+        }
+
+      .glass-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            color: #fff;
+            max-width: 900px;
+            min-width: 320px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+        }
+
+        .glass-card h5 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+           color: black;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .glass-card p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            line-height: 1.6;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-item {
+            position: relative;
+        }
+
+        .carousel-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+            pointer-events: none;
+        }
+
+        .carousel-caption {
+            bottom: 20%;
+            z-index: 10;
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 2rem;
+            height: 2rem;
+            background-size: 100%;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .carousel-indicators {
+            bottom: 10px;
+        }
+
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .carousel-indicators .active {
+            background-color: #fff;
+            transform: scale(1.2);
+        }
+
+        .lead-benefits {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+
+        .lead-benefits li {
+            margin-bottom: 0.8rem;
+            padding-left: 2rem;
+            position: relative;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .lead-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #4ade80;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .btn-primary-glass {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .btn-primary-glass:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .glass-card {
+                min-width: 280px;
+                margin: 0 10px;
+            }
+            
+            .carousel-caption {
+                bottom: 15%;
+                padding: 1rem !important;
+            }
+        }
+
+        .container-section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 4rem;
+            margin-top: 2rem;
+        }
+
+        .choose-card {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .choose-card i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #007bff;
+        }
+
+        .choose-card h5 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .choose-card p {
+            font-size: 1rem;
+            color: #444;
+        }
+
+        .choose-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+
+.testimonial-section {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    text-align: center;
+    
+}
+
+.testimonial-section h2 {
+    font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+.testimonial-track {
+    overflow: hidden;
+}
+
+.testimonial-slide {
+    display: flex;
+    gap: 20px;
+    animation: scrollTestimonials 40s linear infinite;
+    padding: 30px;
+}
+
+.testimonial-track:hover .testimonial-slide {
+    animation-play-state: paused;
+}
+
+.testimonial-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    min-width: 250px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonial-logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+}
+
+@keyframes scrollTestimonials {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+ /* Footer */
+        .modern-footer {
+            background: var(--dark-gradient);
+            color: white;
+            padding: 80px 0 30px 0;
+            position: relative;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h5 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(20px);
+        }
+
+        .social-icon:hover {
+            background: var(--primary-gradient);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Header with Nav and Toggle -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch("pages/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+    </script>
+    <!-- <section id="banner" class="mt-5">
+        <div class="container">
+            <h1>Grow Your Business with Accurate Data</h1>
+            <p>Reach the right audience, increase conversions, and accelerate growth with Procure Marketing Leads.</p>
+            <a href="pages/contact.html" class="btn btn-light btn-lg" style="color: white;">Get Started</a>
+        </div>
+    </section> -->
+ <!-- <section class="py-0">
+        <div class="position-relative" style="height: 100vh;">
+            <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+                
+                 
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"></button>
+                </div>
+
+                <div class="carousel-inner" style="height: 100vh;">
+                    
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2426&q=80" 
+                             class="d-block w-100" alt="Lead Generation" style="height: 100vh; object-fit: cover;">
+                        <div class="carousel-caption d-flex align-items-center justify-content-center">
+                            <div class="glass-card text-center p-4">
+                                <h5><i class="fas fa-chart-line me-3"></i>Problem in Lead Generation</h5>
+                                <p>Many businesses struggle to find high-quality, verified leads that convert into customers. Relying on outdated or non-compliant data often leads to wasted time, effort, and low ROI.</p>
+                                <ul class="lead-benefits">
+                                    <li>Low-quality leads waste valuable resources</li>
+                                    <li>Poor conversion rates impact growth</li>
+                                    <li>Compliance issues create legal risks</li>
+                                </ul>
+                                <a href="#solution" class="btn-primary-glass">
+                                    <i class="fas fa-arrow-right me-2"></i>Discover Our Solution
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80" 
+                             class="d-block w-100" alt="Sales Process" style="height: 100vh; object-fit: cover;">
+                        <div class="carousel-caption d-flex align-items-center justify-content-center">
+                            <div class="glass-card text-center p-4">
+                                <h5><i class="fas fa-handshake me-3"></i>Problem in Sales</h5>
+                                <p>Sales teams often face difficulty in identifying and reaching the right decision-makers. Inefficient lead follow-up and lack of accurate insights result in missed opportunities and lower revenue.</p>
+                                <ul class="lead-benefits">
+                                    <li>Difficulty reaching decision-makers</li>
+                                    <li>Inefficient follow-up processes</li>
+                                    <li>Missed revenue opportunities</li>
+                                </ul>
+                                <a href="#solution" class="btn-primary-glass">
+                                    <i class="fas fa-target me-2"></i>Improve Your Sales
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="https://d28z2sa29jvk2y.cloudfront.net/machintel/asset/blogs/traffic-leads-or-sales-how-to-set-goals-to-define-marketing-campaigns.jpg" 
+                             class="d-block w-100" alt="Marketing Solutions" style="height: 100vh; object-fit: cover;">
+                        <div class="carousel-caption d-flex align-items-center justify-content-center " >
+                            <div class="glass-card text-center p-4">
+                                <h5><i class="fas fa-rocket me-3"></i>PML Provides Quality Marketing Leads</h5>
+                                <p>We specialize in delivering high-converting B2B leads that help your business grow fast and stay compliant with regulations. Transform your lead generation with our proven system.</p>
+                                <ul class="lead-benefits">
+                                    <li>100% verified and compliant leads</li>
+                                    <li>Higher conversion rates guaranteed</li>
+                                    <li>Real-time lead delivery system</li>
+                                    <li>24/7 dedicated support team</li>
+                                </ul>
+                                <a href="#contact" class="btn-primary-glass">
+                                    <i class="fas fa-phone me-2"></i>Get Started Today
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+        </div>
+    </section> -->
+
+<section class="hero-section">
+        <div class="hero-bg-animation"></div>
+        <div class="hero-floating-cards">
+            <div class="floating-card floating-card-1">
+                <i class="fas fa-chart-line text-primary mb-2"></i>
+                <div class="small text-white-50">300% ROI Increase</div>
+            </div>
+            <div class="floating-card floating-card-2">
+                <i class="fas fa-users text-success mb-2"></i>
+                <div class="small text-white-50">10M+ Verified Contacts</div>
+            </div>
+            <div class="floating-card floating-card-3">
+                <i class="fas fa-shield-check text-info mb-2"></i>
+                <div class="small text-white-50">100% GDPR Compliant</div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="hero-content">
+ 
+                        <h1 class="hero-title">Transform Your Lead Generation with Precision Data</h1>
+                        <p class="hero-description">
+                            Stop wasting budget on unqualified leads. Get access to verified, high-converting B2B data that accelerates your growth and maximizes your marketing investment with industry-leading accuracy.
+                        </p>
+                        <div class="hero-cta-group">
+                            <a href="#contact" class="btn-primary-modern">
+                                <i class="fas fa-rocket me-2"></i>
+                                Start Growing Today
+                            </a>
+                            <a href="#process" class="btn-secondary-modern">
+                                <i class="fas fa-play me-2"></i>
+                                See How It Works
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Why Choose Us Section -->
+    <!-- Why Choose Us Section -->
+    <section class="why-choose section">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <p>Discover the impact of our expertise and trusted history of delivering results.</p>
+
+            <div class="choose-grid">
+                <!-- Card 1 -->
+                <div class="choose-card">
+                    <i class="fas fa-check-circle text-dark" style="color: rgb(14, 69, 0);"></i>
+                    <h5>Accurate & Verified Data</h5>
+                    <p>We provide reliable customer information to keep your campaigns precise and effective.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="choose-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h5>Targeted Marketing</h5>
+                    <p>Reach the right audience with customized email lists and data-driven strategies.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="choose-card">
+                    <i class="fas fa-chart-line text-dark"></i>
+                    <h5>Boost Campaign ROI</h5>
+                    <p>Our solutions help you maximize conversions and reduce marketing costs effectively.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="choose-card">
+                    <i class="fas fa-envelope-open-text text-dark"></i>
+                    <h5>Email Appending Expertise</h5>
+                    <p>We update and enrich your existing contacts with verified email addresses for better outreach.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="choose-card">
+                    <i class="fas fa-user-shield text-dark"></i>
+                    <h5>Data Privacy & Security</h5>
+                    <p>Your business data is handled with strict compliance to global privacy and security standards.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="choose-card">
+                    <i class="fas fa-headset text-dark"></i>
+                    <h5>Dedicated Support</h5>
+                    <p>Our team provides 24/7 assistance to ensure your marketing campaigns run smoothly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- impact section -->
+    <section class="impact-section section">
+        <div class="container">
+            <h2>Our Impact in Numbers</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <h3>500+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="impact-card">
+                    <h3>1M+</h3>
+                    <p>Business Professionals Reached</p>
+                </div>
+                <div class="impact-card">
+                    <h3>100+</h3>
+                    <p>Industries Covered</p>
+                </div>
+                <div class="impact-card">
+                    <h3>85%</h3>
+                    <p>Client Retention Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- What We Offer Section -->
+    <section class="why-choose section">
+        <div class="container-section">
+            <h2>What We Offer</h2>
+            <p>Powerful marketing solutions and lead generation services to accelerate your business growth</p>
+
+            <div class="choose-grid">
+
+                <!-- Card 1 -->
+                <div class="choose-card">
+                    <i class="fas fa-bullhorn text-dark"></i>
+                    <h5>Digital Marketing Campaigns</h5>
+                    <p>Effective multi-channel marketing strategies to boost your brand visibility and engagement
+                        online.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="choose-card">
+                    <i class="fas fa-users text-dark"></i>
+                    <h5>Lead Generation</h5>
+                    <p>High-quality, targeted lead lists designed to connect you with decision-makers who are ready to
+                        buy.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="choose-card">
+                    <i class="fas fa-chart-pie text-dark"></i>
+                    <h5>Market Analysis & Insights</h5>
+                    <p>Data-driven research to help you understand market trends, customer needs, and competitor
+                        strategies.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="choose-card">
+                    <i class="fas fa-laptop-code text-dark"></i>
+                    <h5>Custom Web Development</h5>
+                    <p>Building responsive, SEO-optimized websites that deliver seamless user experiences and strong
+                        performance.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="choose-card">
+                    <i class="fas fa-chart-line text-dark"></i>
+                    <h5>Performance Marketing</h5>
+                    <p>Optimizing paid campaigns (PPC, social ads) to drive measurable results and maximize ROI.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="choose-card">
+                    <i class="fas fa-database text-dark"></i>
+                    <h5>Data Management & CRM Solutions</h5>
+                    <p>Organize, maintain, and utilize customer data effectively with tailored CRM solutions to improve
+                        your sales workflow.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Expertise Services Section -->
+    <section class="why-choose section">
+        <div class="container-section">
+            <h2>Expertise That Drives Growth</h2>
+            <p>Our specialized services and expert team empower businesses to scale, manage data, and connect
+                effectively</p>
+
+            <div class="choose-grid">
+
+                <!-- Card 1 -->
+                <div class="choose-card">
+                    <i class="fas fa-users text-dark"></i>
+                    <h5>Experienced Team of Specialists</h5>
+                    <p>Our expert professionals collaborate closely with your business to create innovative strategies
+                        that deliver real results.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="choose-card">
+                    <i class="fas fa-database text-dark"></i>
+                    <h5>Advanced Data Management Solutions</h5>
+                    <p>Organize, manage, and analyze customer data effectively to support smart decision-making and
+                        targeted marketing efforts.</p>
+                </div>
+
+                <!-- Card 3 (Sales Related) -->
+                <div class="choose-card">
+                    <i class="fas fa-chart-line text-dark"></i>
+                    <h5>Sales Strategy Optimization</h5>
+                    <p>Develop and implement data-driven sales strategies to improve lead conversion rates and maximize
+                        revenue growth.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="choose-card">
+                    <i class="fas fa-address-card text-dark"></i>
+                    <h5>Email List Enhancement Services</h5>
+                    <p>Keep your contact lists up to date by appending verified email addresses for more accurate and
+                        effective outreach.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="choose-card">
+                    <i class="fas fa-code text-dark"></i>
+                    <h5>Custom Software Development Expertise</h5>
+                    <p>Build bespoke software solutions designed for your business challenges, ensuring scalability and
+                        efficiency in operations.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="choose-card">
+                    <i class="fas fa-bullseye text-dark"></i>
+                    <h5>Lead Generation Expertise</h5>
+                    <p>We provide high-quality, targeted lead lists that connect you with decision-makers ready to
+                        engage, helping your sales pipeline thrive.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   <section class="testimonial-section">
+    <h2 >What Our Clients Say</h2>
+    <div class="testimonial-track">
+        <div class="testimonial-slide">
+            <div class="testimonial-card">
+                
+                <p>"PML helped us generate high-quality leads consistently!"<br><strong>- John D.</strong></p>
+            </div>
+            <div class="testimonial-card">
+                
+                <p>"Excellent service for targeted email campaigns."<br><strong>- Sarah M.</strong></p>
+            </div>
+            <div class="testimonial-card">
+                
+                <p>"Our marketing ROI improved thanks to their data solutions."<br><strong>- Alex P.</strong></p>
+            </div>
+            <div class="testimonial-card">
+                
+                <p>"Reliable database management services to keep us organized."<br><strong>- Lisa R.</strong></p>
+            </div>
+            <div class="testimonial-card">
+                
+                <p>"They guided us in custom software development for lead automation."<br><strong>- Michael S.</strong></p>
+            </div>
+
+            <!-- Duplicate same testimonials for seamless loop -->
+            <div class="testimonial-card">
+                
+                <p>"PML helped us generate high-quality leads consistently!"<br><strong>- John D.</strong></p>
+            </div>
+            <div class="testimonial-card">
+                
+                <p>"Excellent service for targeted email campaigns."<br><strong>- Sarah M.</strong></p>
+            </div>
+            <div class="testimonial-card">
+                
+                <p>"Our marketing ROI improved thanks to their data solutions."<br><strong>- Alex P.</strong></p>
+            </div>
+            <div class="testimonial-card">
+                
+                <p>"Reliable database management services to keep us organized."<br><strong>- Lisa R.</strong></p>
+            </div>
+            <div class="testimonial-card">
+                
+                <p>"They guided us in custom software development for lead automation."<br><strong>- Michael S.</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Footer -->
+   <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5>About Us</h5>
+                    <p>
+                        Procure Marketing Leads provides accurate, reliable, and compliant marketing data to help companies connect with the right audience and achieve measurable results.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Home</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Who We Are</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Contact Us</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-envelope me-2"></i>
+                        <a href="mailto:info@procure-marketingleads.com" style="color: rgba(255, 255, 255, 0.8);">
+                            info@procure-marketingleads.com
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> Procure Marketing Leads. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Animation observer
+        const observerOptions = {
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.choose-card').forEach(el => {
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+         // Enhanced carousel with pause on hover
+        const carousel = document.querySelector('#carouselExampleAutoplaying');
+        const carouselInstance = new bootstrap.Carousel(carousel, {
+            interval: 4000,
+            wrap: true,
+            pause: 'hover'
+        });
+
+        // Add smooth scroll to anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+    </script>
+
+</body>
+
+</html>

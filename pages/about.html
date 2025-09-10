@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Procure Marketing Leads</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #66baea 0%, #4b86a2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            --glass-bg: rgba(255, 255, 255, 0.15);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --text-light: #718096;
+            --bg-light: #f7fafc;
+            --white: #ffffff;
+            --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 20px 50px rgba(0, 0, 0, 0.1);
+            --shadow-strong: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+      
+
+        /* Hero Banner */
+        .hero-banner {
+            min-height: 100vh;
+            background: var(--primary-gradient);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)" /></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            position: relative;
+            max-width: 800px;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out 0.8s forwards;
+        }
+
+        .hero-btn {
+            background: var(--glass-bg);
+            border: 2px solid var(--glass-border);
+            backdrop-filter: blur(20px);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out 1.1s forwards;
+            display: inline-block;
+        }
+
+        .hero-btn:hover {
+            background: var(--white);
+            color: var(--text-primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        /* Floating elements */
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-1 { width: 100px; height: 100px; top: 20%; left: 10%; animation-delay: 0s; }
+        .floating-2 { width: 150px; height: 150px; top: 60%; right: 15%; animation-delay: 2s; }
+        .floating-3 { width: 80px; height: 80px; bottom: 20%; left: 20%; animation-delay: 4s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, var(--bg-light), var(--white));
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 4vw, 4rem);
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        .about-card {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .about-card.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .about-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .about-card-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-card-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 25px;
+            box-shadow: var(--shadow-medium);
+            transition: all 0.5s ease;
+        }
+
+        .about-card-image:hover img {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .about-card-content {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .about-card-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-card-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-card.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .feature-text {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Data Sources Section */
+        .data-sources-section {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, var(--bg-light), rgba(255, 255, 255, 0.5));
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .data-card {
+            background: var(--white);
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.4s ease;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .data-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .data-card.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .data-icon {
+            font-size: 2.5rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .data-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .data-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .modern-footer {
+            background: var(--dark-gradient);
+            color: white;
+            padding: 80px 0 30px 0;
+            position: relative;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h5 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(20px);
+        }
+
+        .social-icon:hover {
+            background: var(--primary-gradient);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-card {
+                flex-direction: column !important;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .about-card:nth-child(even) {
+                flex-direction: column !important;
+            }
+
+            .about-card-content {
+                padding: 20px 0;
+            }
+
+            .features-grid,
+            .data-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .hero-content {
+                padding: 0 20px;
+            }
+
+            .floating-element {
+                display: none;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <script>
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+    </script>
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="floating-element floating-1"></div>
+        <div class="floating-element floating-2"></div>
+        <div class="floating-element floating-3"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">About Procure Marketing Leads</h1>
+            <p class="hero-subtitle">We empower companies to grow by delivering reliable strategies that reach and engage their ideal clients</p>
+            <a href="#about" class="hero-btn">
+                <i class="fas fa-arrow-down me-2"></i>
+                Discover Our Story
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Our Journey</h2>
+                <p class="section-subtitle">From humble beginnings to industry leaders, discover what makes us different</p>
+            </div>
+
+            <div class="about-cards-container">
+                <!-- About PML Card -->
+                <div class="about-card fade-in-up">
+                    <div class="about-card-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="About PML" class="img-fluid">
+                    </div>
+                    <div class="about-card-content">
+                        <h3 class="about-card-title">ABOUT PML</h3>
+                        <p class="about-card-text">
+                            Procure Marketing Leads helps clients reach their target audience globally. We leverage data-driven strategies, advanced marketing technologies, and industry expertise to deliver measurable results and sustainable growth. Our commitment to excellence has made us a trusted partner for businesses worldwide.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Card -->
+                <div class="about-card fade-in-up">
+                    <div class="about-card-image">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="PML Team" class="img-fluid">
+                    </div>
+                    <div class="about-card-content">
+                        <h3 class="about-card-title">PML TEAM</h3>
+                        <p class="about-card-text">
+                            Our team started with 3 professionals and now consists of 200+ experts. Marketing strategists, data analysts, content creators, and tech specialists collaborate to deliver innovative, accurate, and effective solutions for our clients. Together, we're shaping the future of lead generation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Why PML Card -->
+                <div class="about-card fade-in-up">
+                    <div class="about-card-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Why PML" class="img-fluid">
+                    </div>
+                    <div class="about-card-content">
+                        <h3 class="about-card-title">WHY PML</h3>
+                        <p class="about-card-text">
+                            We focus on building long-term partnerships by delivering transparency, consistent performance, and personalized service. Our solutions help clients generate quality leads, improve conversion rates, and achieve business growth that lasts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Why Choose Us?</h2>
+                <p class="section-subtitle">Discover what sets us apart in the competitive world of lead generation</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h5 class="feature-title">Accurate & Verified Data</h5>
+                    <p class="feature-text">Every contact is carefully sourced, verified, and updated to ensure high accuracy and deliverability.</p>
+                </div>
+
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h5 class="feature-title">Legitimate Business Use</h5>
+                    <p class="feature-text">We only provide business contacts, fully aligned with industry standards and compliance regulations.</p>
+                </div>
+
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h5 class="feature-title">Customizable Lists</h5>
+                    <p class="feature-text">Get data tailored to your target audience: industry, job title, company size, geography, and more.</p>
+                </div>
+
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h5 class="feature-title">Direct Access to Decision-Makers</h5>
+                    <p class="feature-text">Reach key decision-makers directly to improve your marketing outcomes and sales conversion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Sources Section -->
+    <section class="data-sources-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Our Data Sources</h2>
+                <p class="section-subtitle">We collect and validate data from multiple trusted sources to ensure accuracy</p>
+            </div>
+
+            <div class="data-grid">
+                <div class="data-card fade-in-up">
+                    <div class="data-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h5 class="data-title">Trade Shows & Events</h5>
+                    <p class="data-text">Reputable industry events and conferences</p>
+                </div>
+
+                <div class="data-card fade-in-up">
+                    <div class="data-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h5 class="data-title">Business Directories</h5>
+                    <p class="data-text">Professional directories and publications</p>
+                </div>
+
+                <div class="data-card fade-in-up">
+                    <div class="data-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h5 class="data-title">Professional Networks</h5>
+                    <p class="data-text">Professional networking platforms</p>
+                </div>
+
+                <div class="data-card fade-in-up">
+                    <div class="data-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h5 class="data-title">Public Sources</h5>
+                    <p class="data-text">Publicly available business information</p>
+                </div>
+
+                <div class="data-card fade-in-up">
+                    <div class="data-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h5 class="data-title">In-house Research</h5>
+                    <p class="data-text">Our dedicated research and verification team</p>
+                </div>
+
+                <div class="data-card fade-in-up">
+                    <div class="data-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h5 class="data-title">Intent Data Providers</h5>
+                    <p class="data-text">Behavioral signals from platforms that track buyer interest</p>
+                </div>
+
+                <div class="data-card fade-in-up">
+                    <div class="data-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h5 class="data-title">Technographic Insights</h5>
+                    <p class="data-text">Data on technologies companies use to identify opportunities</p>
+                </div>
+
+                <div class="data-card fade-in-up">
+                    <div class="data-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h5 class="data-title">Hiring Signals</h5>
+                    <p class="data-text">Monitor hiring trends to identify expanding companies</p>
+                </div>
+
+                <div class="data-card fade-in-up">
+                    <div class="data-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h5 class="data-title">Review Sites & Feedback</h5>
+                    <p class="data-text">Analyze business reviews to identify pain points and opportunities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5>About Us</h5>
+                    <p>
+                        Procure Marketing Leads provides accurate, reliable, and compliant marketing data to help companies connect with the right audience and achieve measurable results.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Home</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Who We Are</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Contact Us</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-envelope me-2"></i>
+                        <a href="mailto:info@procure-marketingleads.com" style="color: rgba(255, 255, 255, 0.8);">
+                            info@procure-marketingleads.com
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> Procure Marketing Leads. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Enhanced scroll animations
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.fade-in-up');
+            const windowHeight = window.innerHeight;
+
+            elements.forEach((element, index) => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    setTimeout(() => {
+                        element.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+        }
+
+        // Legacy fade-in support
+        function handleLegacyAnimations() {
+            const fadeElements = document.querySelectorAll('.about-card, .feature-card, .data-card');
+            fadeElements.forEach((el, index) => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    setTimeout(() => {
+                        el.classList.add('fade-in');
+                    }, index * 100);
+                }
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize animations on load and scroll
+        window.addEventListener('scroll', () => {
+            handleScrollAnimations();
+            handleLegacyAnimations();
+        });
+
+        window.addEventListener('load', () => {
+            handleScrollAnimations();
+            handleLegacyAnimations();
+        });
+
+        // Parallax effect for floating elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelectorAll('.floating-element');
+            const speed = 0.5;
+
+            parallax.forEach((element) => {
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
