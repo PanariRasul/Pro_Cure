@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Attendees Lists - Procure Marketing Leads</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary: #6366f1;
@@ -29,7 +32,7 @@
             --text: #1e293b;
             --text-light: #64748b;
             --white: #ffffff;
-            
+
             --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
@@ -40,7 +43,7 @@
             --gradient-green: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
             --gradient-pink: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
             --gradient-blue: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            
+
             --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
             --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
             --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -70,7 +73,7 @@
             overflow-x: hidden;
         }
 
-        
+
 
         /* Hero Section */
         .hero-section {
@@ -89,7 +92,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
+            background:
                 radial-gradient(circle at 30% 40%, rgba(99, 102, 241, 0.4) 0%, transparent 50%),
                 radial-gradient(circle at 70% 20%, rgba(236, 72, 153, 0.4) 0%, transparent 50%),
                 radial-gradient(circle at 50% 80%, rgba(6, 182, 212, 0.3) 0%, transparent 50%);
@@ -102,16 +105,21 @@
             right: 0;
             bottom: 0;
             opacity: 0.03;
-            background: 
-                linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+            background:
+                linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
             background-size: 60px 60px;
             animation: grid-move 25s linear infinite;
         }
 
         @keyframes grid-move {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(60px, 60px); }
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(60px, 60px);
+            }
         }
 
         .floating-orbs {
@@ -158,9 +166,19 @@
         }
 
         @keyframes float-orbs {
-            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
-            33% { transform: translateY(-50px) translateX(30px) rotate(120deg); }
-            66% { transform: translateY(30px) translateX(-20px) rotate(240deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) translateX(0px) rotate(0deg);
+            }
+
+            33% {
+                transform: translateY(-50px) translateX(30px) rotate(120deg);
+            }
+
+            66% {
+                transform: translateY(30px) translateX(-20px) rotate(240deg);
+            }
         }
 
         .hero-content {
@@ -188,11 +206,14 @@
         }
 
         @keyframes pulse-badge {
-            0%, 100% { 
+
+            0%,
+            100% {
                 transform: scale(1);
                 box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
             }
-            50% { 
+
+            50% {
                 transform: scale(1.05);
                 box-shadow: 0 0 50px rgba(16, 185, 129, 0.4);
             }
@@ -486,7 +507,7 @@
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.3rem;
             font-weight: 600;
-            color:black;
+            color: black;
             margin-bottom: 1rem;
         }
 
@@ -738,30 +759,30 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            
+
             .hero-content {
                 padding: 6rem 1rem 2rem;
             }
-            
+
             .process-grid,
             .features-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-            
+
             .stats-container {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
+
             .modern-table {
                 font-size: 0.85rem;
             }
-            
+
             .modern-table th,
             .modern-table td {
                 padding: 0.8rem 0.5rem;
             }
-            
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
@@ -780,20 +801,38 @@
             transform: translateY(0);
         }
 
-        .stagger-1 { transition-delay: 0.1s; }
-        .stagger-2 { transition-delay: 0.2s; }
-        .stagger-3 { transition-delay: 0.3s; }
-        .stagger-4 { transition-delay: 0.4s; }
-        .stagger-5 { transition-delay: 0.5s; }
-        .stagger-6 { transition-delay: 0.6s; }
+        .stagger-1 {
+            transition-delay: 0.1s;
+        }
+
+        .stagger-2 {
+            transition-delay: 0.2s;
+        }
+
+        .stagger-3 {
+            transition-delay: 0.3s;
+        }
+
+        .stagger-4 {
+            transition-delay: 0.4s;
+        }
+
+        .stagger-5 {
+            transition-delay: 0.5s;
+        }
+
+        .stagger-6 {
+            transition-delay: 0.6s;
+        }
     </style>
 </head>
+
 <body>
     <!-- Enhanced Navigation -->
     <div id="navbar"></div>
 
     <script>
-        fetch("/pages/navbar.html")
+        fetch("navbar.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById("navbar").innerHTML = data;
@@ -803,7 +842,7 @@
     <section id="home" class="hero-section">
         <div class="hero-bg"></div>
         <div class="hero-grid"></div>
-        
+
         <div class="floating-orbs">
             <div class="orb"></div>
             <div class="orb"></div>
@@ -819,7 +858,8 @@
                 Premium <span class="gradient-text">Event Attendees</span> Lists
             </h1>
             <p class="hero-subtitle" style="color: black;">
-                Connect with verified professionals from top industry events worldwide. Access decision-makers who are actively engaged in your target markets.
+                Connect with verified professionals from top industry events worldwide. Access decision-makers who are
+                actively engaged in your target markets.
             </p>
         </div>
     </section>
@@ -830,7 +870,9 @@
             <div class="section-header">
                 <h2 class="section-title animate-on-scroll">How We Collect Attendees Lists</h2>
                 <p class="section-subtitle animate-on-scroll">
-                    We specialize in providing authentic and verified attendee databases from top industry trade shows, conferences, and expos worldwide. Our collection process is transparent and designed to ensure maximum accuracy.
+                    We specialize in providing authentic and verified attendee databases from top industry trade shows,
+                    conferences, and expos worldwide. Our collection process is transparent and designed to ensure
+                    maximum accuracy.
                 </p>
             </div>
 
@@ -841,7 +883,8 @@
                     </div>
                     <h4 class="process-title">Event Partnerships & Direct Sources</h4>
                     <p class="process-description">
-                        We collaborate directly with event organizers, industry associations, and professional bodies to gather comprehensive attendee and exhibitor databases.
+                        We collaborate directly with event organizers, industry associations, and professional bodies to
+                        gather comprehensive attendee and exhibitor databases.
                     </p>
                 </div>
 
@@ -851,7 +894,8 @@
                     </div>
                     <h4 class="process-title">Official Event Publications & Directories</h4>
                     <p class="process-description">
-                        Many events release public directories of attendees, exhibitors, and sponsors. We collect and organize these into usable, verified formats for maximum utility.
+                        Many events release public directories of attendees, exhibitors, and sponsors. We collect and
+                        organize these into usable, verified formats for maximum utility.
                     </p>
                 </div>
 
@@ -861,7 +905,8 @@
                     </div>
                     <h4 class="process-title">On-Ground Research Teams</h4>
                     <p class="process-description">
-                        Our specialized research teams attend events personally, collecting business cards, brochures, and contact information directly from industry professionals.
+                        Our specialized research teams attend events personally, collecting business cards, brochures,
+                        and contact information directly from industry professionals.
                     </p>
                 </div>
 
@@ -871,7 +916,8 @@
                     </div>
                     <h4 class="process-title">Legitimate Public & Business Sources</h4>
                     <p class="process-description">
-                        We enrich attendee data using official company websites, LinkedIn, and business directories — exclusively from publicly available sources.
+                        We enrich attendee data using official company websites, LinkedIn, and business directories —
+                        exclusively from publicly available sources.
                     </p>
                 </div>
 
@@ -881,7 +927,8 @@
                     </div>
                     <h4 class="process-title">Verification & Data Hygiene</h4>
                     <p class="process-description">
-                        Every attendee contact is verified using advanced email validation tools, phone checks, and human research to ensure accuracy and minimize bounce rates.
+                        Every attendee contact is verified using advanced email validation tools, phone checks, and
+                        human research to ensure accuracy and minimize bounce rates.
                     </p>
                 </div>
             </div>
@@ -912,7 +959,7 @@
 
     <!-- Features Section -->
     <section class="features-section">
-        <div class="features-container" >
+        <div class="features-container">
             <div class="section-header">
                 <h2 class="section-title animate-on-scroll">Why Our Attendee Lists Stand Out</h2>
                 <p class="section-subtitle animate-on-scroll">
@@ -920,14 +967,15 @@
                 </p>
             </div>
 
-            <div class="process-grid" >
+            <div class="process-grid">
                 <div class="process-card animate-on-scroll stagger-1">
                     <div class="process-icon">
                         <i class="fas fa-sync-alt"></i>
                     </div>
                     <h5 class="process-title">Fresh & Updated</h5>
                     <p class="process-description">
-                        We focus on upcoming and recent events, ensuring you connect with professionals who are currently active in the market.
+                        We focus on upcoming and recent events, ensuring you connect with professionals who are
+                        currently active in the market.
                     </p>
                 </div>
 
@@ -937,7 +985,8 @@
                     </div>
                     <h5 class="process-title">Customized Targeting</h5>
                     <p class="process-description">
-                        Choose attendees by industry, event name, job title, company size, or geographic region for precise targeting.
+                        Choose attendees by industry, event name, job title, company size, or geographic region for
+                        precise targeting.
                     </p>
                 </div>
 
@@ -947,7 +996,8 @@
                     </div>
                     <h5 class="process-title">Compliance First</h5>
                     <p class="process-description">
-                        Only B2B contacts are provided — no consumer or personal data. Fully compliant with GDPR and data protection regulations.
+                        Only B2B contacts are provided — no consumer or personal data. Fully compliant with GDPR and
+                        data protection regulations.
                     </p>
                 </div>
 
@@ -957,7 +1007,8 @@
                     </div>
                     <h5 class="process-title">Value for Sales & Marketing</h5>
                     <p class="process-description">
-                        Connect directly with decision-makers who attended events in your target markets for maximum conversion potential.
+                        Connect directly with decision-makers who attended events in your target markets for maximum
+                        conversion potential.
                     </p>
                 </div>
             </div>
@@ -1045,7 +1096,8 @@
         <div class="cta-container">
             <h2 class="cta-title">Ready to Connect with Industry Leaders?</h2>
             <p class="cta-subtitle">
-                Get access to verified attendee lists from the world's top industry events. Transform your outreach with precision-targeted prospects.
+                Get access to verified attendee lists from the world's top industry events. Transform your outreach with
+                precision-targeted prospects.
             </p>
             <div class="cta-buttons">
                 <a href="mailto:info@procure-marketingleads.com" class="btn-cta">
@@ -1066,7 +1118,8 @@
             <div class="footer-section">
                 <h5>Procure Marketing Leads</h5>
                 <p>
-                    Specializing in high-quality, verified event attendee databases that help companies connect with the right audience and accelerate growth across all major industries.
+                    Specializing in high-quality, verified event attendee databases that help companies connect with the
+                    right audience and accelerate growth across all major industries.
                 </p>
                 <div class="social-icons">
                     <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
@@ -1131,7 +1184,7 @@
         const animateCounter = (element, target, duration = 2000) => {
             let start = 0;
             const increment = target / (duration / 16);
-            
+
             const timer = setInterval(() => {
                 start += increment;
                 if (start >= target) {
@@ -1162,4 +1215,5 @@
         // Navbar scroll effec
     </script>
 </body>
+
 </html>
