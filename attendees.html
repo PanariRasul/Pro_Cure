@@ -73,8 +73,6 @@
             overflow-x: hidden;
         }
 
-
-
         /* Hero Section */
         .hero-section {
             min-height: 100vh;
@@ -187,7 +185,7 @@
             text-align: center;
             max-width: 1000px;
             margin: 0 auto;
-            padding: 8rem 2rem 2rem;
+            padding: 4rem 2rem 2rem;
         }
 
         .hero-badge {
@@ -221,7 +219,7 @@
 
         .hero-title {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-size: clamp(2rem, 6vw, 4.5rem);
             font-weight: 800;
             line-height: 1.2;
             color: var(--white);
@@ -236,7 +234,7 @@
         }
 
         .hero-subtitle {
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 3vw, 1.3rem);
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 3rem;
             max-width: 600px;
@@ -247,7 +245,7 @@
 
         /* Process Section */
         .process-section {
-            padding: 8rem 2rem;
+            padding: 4rem 2rem;
             background: var(--dark);
             position: relative;
         }
@@ -259,19 +257,19 @@
 
         .section-header {
             text-align: center;
-            margin-bottom: 5rem;
+            margin-bottom: 3rem;
             color: #000000;
         }
 
         .section-title {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-size: clamp(1.8rem, 5vw, 3.5rem);
             font-weight: 700;
             margin-bottom: 1rem;
         }
 
         .section-subtitle {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
             color: rgba(0, 0, 0, 0.7);
             max-width: 800px;
             margin: 0 auto;
@@ -280,9 +278,9 @@
 
         .process-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
 
         .process-card {
@@ -290,7 +288,7 @@
             backdrop-filter: blur(20px);
             border: 1px solid rgba(5, 2, 2, 0.1);
             border-radius: 25px;
-            padding: 2.5rem;
+            padding: 2rem;
             transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
             overflow: hidden;
@@ -337,15 +335,15 @@
         }
 
         .process-icon {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             background: var(--gradient-purple);
             border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 1.5rem;
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: var(--white);
             transition: all 0.4s ease;
             position: relative;
@@ -359,7 +357,7 @@
 
         .process-title {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.3rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
             font-weight: 600;
             color: black;
             margin-bottom: 1rem;
@@ -372,11 +370,12 @@
             line-height: 1.7;
             position: relative;
             z-index: 3;
+            font-size: clamp(0.9rem, 2vw, 1rem);
         }
 
         /* Stats Section */
         .stats-section {
-            padding: 6rem 2rem;
+            padding: 4rem 2rem;
             background: linear-gradient(135deg, var(--dark-light) 0%, var(--dark) 100%);
             position: relative;
         }
@@ -385,8 +384,8 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
         }
 
         .stat-card {
@@ -394,7 +393,7 @@
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 25px;
-            padding: 3rem 2rem;
+            padding: 2rem 1rem;
             text-align: center;
             color: black;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -426,7 +425,7 @@
 
         .stat-number {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 3.5rem;
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 800;
             color: black;
             background: white;
@@ -442,14 +441,14 @@
         .stat-label {
             color: rgba(255, 255, 255, 0.8);
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
             position: relative;
             z-index: 2;
         }
 
         /* Features Section */
         .features-section {
-            padding: 8rem 2rem;
+            padding: 4rem 2rem;
             background: var(--dark);
         }
 
@@ -460,9 +459,9 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
         .feature-card {
@@ -470,7 +469,7 @@
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 25px;
-            padding: 2.5rem;
+            padding: 2rem;
             text-align: center;
             color: black;
             transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -485,15 +484,15 @@
         }
 
         .feature-icon {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             background: var(--gradient-success);
             border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.5rem;
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: var(--white);
             transition: all 0.4s ease;
         }
@@ -505,7 +504,7 @@
 
         .feature-title {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.3rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
             font-weight: 600;
             color: black;
             margin-bottom: 1rem;
@@ -514,77 +513,12 @@
         .feature-description {
             color: rgba(0, 0, 0, 0.7);
             line-height: 1.7;
-        }
-
-        /* Events Table Section */
-        .events-section {
-            padding: 8rem 2rem;
-            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
-        }
-
-        .events-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .table-container {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            overflow: hidden;
-            margin-top: 3rem;
-        }
-
-        .modern-table {
-            margin: 0;
-            color: var(--white);
-            background: transparent;
-        }
-
-        .modern-table thead {
-            background: rgba(99, 102, 241, 0.1);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .modern-table th {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 600;
-            color: var(--white);
-            padding: 1.5rem 1rem;
-            border: none;
-            font-size: 1rem;
-        }
-
-        .modern-table td {
-            padding: 1.2rem 1rem;
-            border-color: rgba(255, 255, 255, 0.05);
-            color: rgba(255, 255, 255, 0.8);
-            vertical-align: middle;
-        }
-
-        .modern-table tbody tr {
-            transition: all 0.3s ease;
-        }
-
-        .modern-table tbody tr:hover {
-            background: rgba(99, 102, 241, 0.05);
-            color: var(--white);
-        }
-
-        .event-category {
-            padding: 0.5rem 1rem;
-            background: var(--gradient-purple);
-            color: var(--white);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            display: inline-block;
+            font-size: clamp(0.9rem, 2vw, 1rem);
         }
 
         /* CTA Section */
         .cta-section {
-            padding: 8rem 2rem;
+            padding: 4rem 2rem;
             background: var(--gradient-cyber);
             position: relative;
             overflow: hidden;
@@ -610,14 +544,14 @@
 
         .cta-title {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(1.8rem, 5vw, 4rem);
             font-weight: 700;
             color: var(--white);
             margin-bottom: 1.5rem;
         }
 
         .cta-subtitle {
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 3vw, 1.3rem);
             color: rgba(255, 255, 255, 0.9);
             margin-bottom: 3rem;
             line-height: 1.7;
@@ -633,15 +567,16 @@
         .btn-cta {
             background: var(--white);
             color: var(--primary);
-            padding: 1.2rem 3rem;
+            padding: 1rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: var(--shadow-xl);
             position: relative;
             overflow: hidden;
+            display: inline-block;
         }
 
         .btn-cta::before {
@@ -672,120 +607,126 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 15px;
             color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
             backdrop-filter: blur(20px);
         }
 
-        /* Footer */
-        .footer {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: var(--white);
-            padding: 4rem 2rem 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-section h5 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--white);
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            line-height: 1.8;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: var(--white);
-        }
-
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.8rem;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .social-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(20px);
-        }
-
-        .social-icon:hover {
-            background: var(--gradient-cyber);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-glow-cyan);
-            color: var(--white);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-
+        /* Mobile Responsive Improvements */
+        @media (max-width: 1024px) {
             .hero-content {
-                padding: 6rem 1rem 2rem;
+                padding: 3rem 1.5rem 2rem;
+            }
+
+            .process-grid,
+            .features-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .process-card,
+            .feature-card {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 2rem 1rem 2rem;
+            }
+
+            .process-section,
+            .features-section,
+            .stats-section,
+            .cta-section {
+                padding: 3rem 1rem;
+            }
+
+            .section-header {
+                margin-bottom: 2rem;
             }
 
             .process-grid,
             .features-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 1.5rem;
             }
 
             .stats-container {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
             }
 
-            .modern-table {
-                font-size: 0.85rem;
+            .process-card,
+            .feature-card,
+            .stat-card {
+                padding: 1.5rem;
             }
 
-            .modern-table th,
-            .modern-table td {
-                padding: 0.8rem 0.5rem;
+            .process-icon,
+            .feature-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
             }
 
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .btn-cta {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .compliance-note {
+                padding: 1rem 1.5rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content {
+                padding: 1.5rem 0.75rem 1rem;
+            }
+
+            .hero-badge {
+                padding: 0.5rem 1.5rem;
+                font-size: 0.8rem;
+            }
+
+            .process-section,
+            .features-section,
+            .stats-section,
+            .cta-section {
+                padding: 2rem 0.75rem;
+            }
+
+            .process-card,
+            .feature-card,
+            .stat-card {
+                padding: 1.25rem;
+                border-radius: 20px;
+            }
+
+            .orb:nth-child(1) {
+                width: 150px;
+                height: 150px;
+            }
+
+            .orb:nth-child(2) {
+                width: 100px;
+                height: 100px;
+            }
+
+            .orb:nth-child(3) {
+                width: 80px;
+                height: 80px;
             }
         }
 
@@ -824,11 +765,140 @@
         .stagger-6 {
             transition-delay: 0.6s;
         }
+
+        .metrics-display {
+            width: 100%;
+            padding: 4rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            margin: 2rem auto;
+            max-width: 1200px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .metrics-grid {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+      
+.metric-item{
+    width: 300px;
+}
+        .metric-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s;
+        }
+
+        .metric-item:hover::before {
+            left: 100%;
+        }
+
+        .metric-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .metric-item.reveal-animation {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .counter-display {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #000000;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 1rem;
+            text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+
+        }
+
+
+.metric-title{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+}
+     
+      
+        .delay-first {
+            animation-delay: 0.1s;
+        }
+
+        .delay-second {
+            animation-delay: 0.2s;
+        }
+
+        .delay-third {
+            animation-delay: 0.3s;
+        }
+
+        .delay-fourth {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes numberAnimation {
+            from {
+                opacity: 0.3;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .active-counting {
+            animation: numberAnimation 2s ease-out;
+        }
+
+        @media (max-width: 768px) {
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .metric-item {
+                padding: 2rem 1rem;
+            }
+
+            .counter-display {
+                font-size: 2.8rem;
+            }
+
+            .metric-title {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .metrics-display {
+                padding: 2rem 1rem;
+                margin: 1rem;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <!-- Enhanced Navigation -->
+    <!-- Header with Nav and Toggle -->
     <div id="navbar"></div>
 
     <script>
@@ -839,7 +909,7 @@
             });
     </script>
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
+    <section id="home" class="hero-section" style="margin-top: 5rem;">
         <div class="hero-bg"></div>
         <div class="hero-grid"></div>
 
@@ -936,25 +1006,30 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="stats-container">
-            <div class="stat-card animate-on-scroll stagger-1">
-                <div class="stat-number" data-target="500">0</div>
-                <div class="stat-label">Events Covered</div>
+    <section class="metrics-display" id="performance-metrics">
+        <div class="metrics-grid">
+            <div class="metric-item scroll-trigger delay-first process-card">
+                <div class="metric-symbol process-icon" style="margin:auto"  ><i class="fas fa-chart-bar"></i></div>
+                <div class="counter-display" style="text-align: center; margin-top: 1rem;" data-final-value="500" data-append="+">0</div>
+                <div class="metric-title">Events Covered</div>
             </div>
-            <div class="stat-card animate-on-scroll stagger-2">
-                <div class="stat-number" data-target="95">0</div>
-                <div class="stat-label">Data Accuracy</div>
+            <div class="metric-item scroll-trigger delay-second process-card">
+                <div class="metric-symbol process-icon" style="margin:auto"><i class="fas fa-bullseye"></i></div>
+                <div class="counter-display" style="text-align: center; margin-top: 1rem;" data-final-value="95" data-append="%">0</div>
+                <div class="metric-title">Data Accuracy</div>
             </div>
-            <div class="stat-card animate-on-scroll stagger-3">
-                <div class="stat-number" data-target="1000000">0</div>
-                <div class="stat-label">Verified Contacts</div>
+            <div class="metric-item scroll-trigger delay-third process-card">
+                <div class="metric-symbol process-icon" style="margin:auto"><i class="fas fa-users"></i></div>
+                <div class="counter-display" style="text-align: center; margin-top: 1rem;"  data-final-value="10" data-append="M+">0</div>
+                <div class="metric-title">Verified Contacts</div>
             </div>
-            <div class="stat-card animate-on-scroll stagger-4">
-                <div class="stat-number" data-target="50">0</div>
-                <div class="stat-label">Industries</div>
+            <div class="metric-item scroll-trigger delay-fourth process-card">
+                <div class="metric-symbol process-icon" style="margin:auto"><i class="fas fa-industry"></i></div>
+                <div class="counter-display" style="text-align: center; margin-top: 1rem;" data-final-value="50" data-append="+">0</div>
+                <div class="metric-title">Industries</div>
             </div>
         </div>
+
     </section>
 
     <!-- Features Section -->
@@ -1015,81 +1090,6 @@
         </div>
     </section>
 
-    <!-- Events Table Section -->
-    <!-- <section id="events" class="events-section">
-        <div class="events-container">
-            <div class="section-header">
-                <h2 class="section-title animate-on-scroll">Example Events We Cover</h2>
-                <p class="section-subtitle animate-on-scroll">
-                    A sample of the premium industry events in our comprehensive database
-                </p>
-            </div>
-
-            <div class="table-container animate-on-scroll">
-                <table class="modern-table">
-                    <thead>
-                        <tr>
-                            <th>Event Name</th>
-                            <th>Category</th>
-                            <th>Estimated Exhibitors</th>
-                            <th>Estimated Attendees</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>CES 2024</strong></td>
-                            <td><span class="event-category">Technology</span></td>
-                            <td>3,000+</td>
-                            <td>115,000+</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Mobile World Congress</strong></td>
-                            <td><span class="event-category">Telecom</span></td>
-                            <td>2,400+</td>
-                            <td>95,000+</td>
-                        </tr>
-                        <tr>
-                            <td><strong>HIMSS Healthcare IT</strong></td>
-                            <td><span class="event-category">Healthcare</span></td>
-                            <td>1,300+</td>
-                            <td>42,000+</td>
-                        </tr>
-                        <tr>
-                            <td><strong>NAB Show</strong></td>
-                            <td><span class="event-category">Media</span></td>
-                            <td>1,700+</td>
-                            <td>91,000+</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Dreamforce</strong></td>
-                            <td><span class="event-category">Software</span></td>
-                            <td>400+</td>
-                            <td>171,000+</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Money 20/20</strong></td>
-                            <td><span class="event-category">Fintech</span></td>
-                            <td>800+</td>
-                            <td>12,000+</td>
-                        </tr>
-                        <tr>
-                            <td><strong>RSA Conference</strong></td>
-                            <td><span class="event-category">Cybersecurity</span></td>
-                            <td>700+</td>
-                            <td>42,500+</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Hannover Messe</strong></td>
-                            <td><span class="event-category">Manufacturing</span></td>
-                            <td>4,000+</td>
-                            <td>130,000+</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section> -->
-
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-bg"></div>
@@ -1111,55 +1111,16 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h5>Procure Marketing Leads</h5>
-                <p>
-                    Specializing in high-quality, verified event attendee databases that help companies connect with the
-                    right audience and accelerate growth across all major industries.
-                </p>
-                <div class="social-icons">
-                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-section">
-                <h5>Quick Links</h5>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#process">Our Process</a></li>
-                    <li><a href="#events">Event Coverage</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h5>Contact & Support</h5>
-                <p>
-                    <i class="fas fa-envelope me-2"></i>
-                    <a href="mailto:info@procure-marketingleads.com">info@procure-marketingleads.com</a>
-                </p>
-                <p>
-                    <i class="fas fa-clock me-2"></i>
-                    24/7 Support Available
-                </p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>© <span id="currentYear"></span> Procure Marketing Leads. All rights reserved.</p>
-        </div>
-    </footer>
-
+    <div class="footer.html"></div>
+    <div id="footer"></div>
     <script>
-        // Set current year
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+    <script>
 
         // Smooth scroll animations
         const observerOptions = {
@@ -1211,9 +1172,66 @@
         document.querySelectorAll('.stat-card').forEach(card => {
             statsObserver.observe(card);
         });
+        const watcherOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-        // Navbar scroll effec
+        const scrollWatcher = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const item = entry.target;
+                    item.classList.add('reveal-animation');
+
+                    // Start counter animation
+                    setTimeout(() => {
+                        startCounterAnimation(item.querySelector('.counter-display'));
+                    }, parseFloat(getComputedStyle(item).animationDelay) * 1000);
+                }
+            });
+        }, watcherOptions);
+
+        // Observe all metric items
+        document.querySelectorAll('.metric-item').forEach(item => {
+            scrollWatcher.observe(item);
+        });
+
+        // Counter animation function
+        function startCounterAnimation(element) {
+            const finalValue = parseInt(element.getAttribute('data-final-value'));
+            const appendText = element.getAttribute('data-append') || '';
+            const animationDuration = 2000; // 2 seconds
+            const totalSteps = 60;
+            const incrementValue = finalValue / totalSteps;
+            let currentValue = 0;
+
+            element.classList.add('active-counting');
+
+            const animationTimer = setInterval(() => {
+                currentValue += incrementValue;
+                if (currentValue >= finalValue) {
+                    element.textContent = finalValue + appendText;
+                    clearInterval(animationTimer);
+                } else {
+                    element.textContent = Math.floor(currentValue) + appendText;
+                }
+            }, animationDuration / totalSteps);
+        }
+
+        // Trigger animations on page load if elements are already visible
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.metric-item').forEach(item => {
+                const elementBounds = item.getBoundingClientRect();
+                if (elementBounds.top < window.innerHeight && elementBounds.bottom > 0) {
+                    item.classList.add('reveal-animation');
+                    setTimeout(() => {
+                        startCounterAnimation(item.querySelector('.counter-display'));
+                    }, parseFloat(getComputedStyle(item).animationDelay) * 1000);
+                }
+            });
+        });
     </script>
+
 </body>
 
 </html>
